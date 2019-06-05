@@ -7,7 +7,7 @@ const checkCollisions = (cannonBalls, flyingDiscs) => {
     const currentLifeTime = (new Date()).getTime() - flyingDisc.createdAt;
     const calculatedPosition = {
       x: flyingDisc.position.x,
-      y: flyingDisc.position.y + ((currentLifeTime / 4000) * gameHeight),
+      y: flyingDisc.position.y + ((currentLifeTime / 8000) * gameHeight),
     };
     const rectA = {
       x1: calculatedPosition.x - 40,

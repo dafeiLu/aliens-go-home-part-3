@@ -6,8 +6,8 @@ import * as Auth0 from 'auth0-web';
 import io from 'socket.io-client';
 
 Auth0.configure({
-  domain: 'digituz-corp.auth0.com',
-  clientID: 'D41G9fJIvLrUJivCJpAkxOA74fpxn2Rg',
+  domain: 'dafei.auth0.com',
+  clientID: '7gFVqRdN5kZ57wOmiLuzBEpHIR1X57Vt',
   redirectUri: 'http://localhost:3000/',
   responseType: 'token id_token',
   scope: 'openid profile manage:points',

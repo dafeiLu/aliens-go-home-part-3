@@ -17,7 +17,7 @@ function moveObjects(state, action) {
 
   const now = (new Date()).getTime();
   let flyingObjects = newState.gameState.flyingObjects.filter(object => (
-    (now - object.createdAt) < 4000
+    (now - object.createdAt) < 8000
   ));
 
   const lostLife = state.gameState.flyingObjects.length > flyingObjects.length;
