@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import FlyingObjectBase from './FlyingObjectBase';
-import FlyingObjectTop from './FlyingObjectTop';
+// import FlyingObjectTop from './FlyingObjectTop';
 import { gameHeight } from '../utils/constants';
+//import ufo from '../img/ufo.png'
 
 const moveVertically = keyframes`
   0% {
@@ -20,8 +21,9 @@ const Move = styled.g`
 
 const FlyingObject = props => (
   <Move>
+    {/* <img className="ufo" src="../img/ufo.png" position={props.position} alt="UFO"></img> */}
     <FlyingObjectBase position={props.position} />
-    <FlyingObjectTop position={props.position} />
+    {/* <FlyingObjectTop position={props.position} /> */}
   </Move>
 );
 

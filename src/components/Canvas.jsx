@@ -67,7 +67,6 @@ const Canvas = (props) => {
           position={flyingObject.position}
         />
       ))}
-
       {lives}
     </svg>
   );
