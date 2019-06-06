@@ -10,17 +10,17 @@ const checkCollisions = (cannonBalls, flyingDiscs) => {
       y: flyingDisc.position.y + ((currentLifeTime / 8000) * gameHeight),
     };
     const rectA = {
-      x1: calculatedPosition.x - 40,
-      y1: calculatedPosition.y - 10,
-      x2: calculatedPosition.x + 40,
-      y2: calculatedPosition.y + 10,
+      x1: calculatedPosition.x - 80,
+      y1: calculatedPosition.y - 20,
+      x2: calculatedPosition.x + 80,
+      y2: calculatedPosition.y + 20,
     };
     cannonBalls.forEach((cannonBall) => {
       const rectB = {
-        x1: cannonBall.position.x - 8,
-        y1: cannonBall.position.y - 8,
-        x2: cannonBall.position.x + 8,
-        y2: cannonBall.position.y + 8,
+        x1: cannonBall.position.x - 16,
+        y1: cannonBall.position.y - 16,
+        x2: cannonBall.position.x + 16,
+        y2: cannonBall.position.y + 16,
       };
       if (checkCollision(rectA, rectB)) {
         objectsDestroyed.push({

@@ -8,9 +8,9 @@ const FlyingObjectTop = (props) => {
     stroke: '#7d7d7d',
   };
 
-  const baseWith = 40;
-  const halfBase = 20;
-  const height = 25;
+  const baseWith = 80;
+  const halfBase = 40;
+  const height = 50;
 
   const cubicBezierCurve = {
     initialAxis: {
@@ -18,11 +18,11 @@ const FlyingObjectTop = (props) => {
       y: props.position.y,
     },
     initialControlPoint: {
-      x: 10,
+      x: 20,
       y: -height,
     },
     endingControlPoint: {
-      x: 30,
+      x: 60,
       y: -height,
     },
     endingAxis: {

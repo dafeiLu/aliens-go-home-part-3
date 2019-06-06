@@ -68,7 +68,8 @@ const Canvas = (props) => {
         />
       ))}
       {lives}
-    </svg>
+      
+      </svg>
   );
 };
 
