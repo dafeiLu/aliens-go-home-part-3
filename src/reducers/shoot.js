@@ -1,4 +1,5 @@
-import { calculateAngle } from '../utils/formulas';
+import { calculateAngle, generateRandomNumber } from '../utils/formulas';
+import RandomFocus from '../components/RandomFocus'
 
 function shoot(state, action) {
   if (!state.gameState.started) return state;
@@ -9,7 +10,7 @@ function shoot(state, action) {
 
   const { x, y } = action.mousePosition;
 
-  const angle = calculateAngle(0, 0, x, y);
+  const angle = calculateAngle(generateRandomNumber());
 
   const id = (new Date()).getTime();
   const cannonBall = {

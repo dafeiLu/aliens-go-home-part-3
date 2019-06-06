@@ -1,7 +1,8 @@
-import { calculateAngle } from '../utils/formulas';
+import { calculateAngle, generateRandomNumber } from '../utils/formulas';
 import createFlyingObjects from './createFlyingObjects';
 import moveBalls from './moveCannonBalls';
 import checkCollisions from './checkCollisions';
+import RandomFocus from '../components/RandomFocus';
 
 function moveObjects(state, action) {
   if (!state.gameState.started) return state;
@@ -34,7 +35,7 @@ function moveObjects(state, action) {
   }
 
   const { x, y } = mousePosition;
-  const angle = calculateAngle(0, 0, x, y);
+  const angle = calculateAngle(generateRandomNumber()); //TODO, change to attention score
 
   const objectsDestroyed = checkCollisions(cannonBalls, flyingObjects);
   const cannonBallsDestroyed = objectsDestroyed.map(object => (object.cannonBallId));

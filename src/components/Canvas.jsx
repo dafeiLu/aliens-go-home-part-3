@@ -12,11 +12,13 @@ import Leaderboard from './Leaderboard';
 import { signIn } from 'auth0-web';
 import CannonBall from './CannonBall';
 import Heart from './Heart';
+import RandomFocus from './RandomFocus';
+import { generateRandomNumber } from '../utils/formulas';
 
 const Canvas = (props) => {
   const gameHeight = 1200;
   const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
-
+  let score = 30;
   const lives = [];
   for (let i = 0; i < props.gameState.lives; i++) {
     const heartPosition = {
@@ -25,7 +27,7 @@ const Canvas = (props) => {
     };
     lives.push(<Heart key={i} position={heartPosition}/>);
   }
-
+  
   return (
     <svg
       id="aliens-go-home-canvas"
@@ -68,7 +70,7 @@ const Canvas = (props) => {
         />
       ))}
       {lives}
-      
+      <RandomFocus score={score} />
       </svg>
   );
 };
